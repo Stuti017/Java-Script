@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<script>
+    function hiprint() {
+        let a = parseInt(document.getElementById("acnum").value);
+
+        document.getElementById("acsqa").value = (a * a);
+        document.getElementById("accub").value = (a * a * a);
+    }
+</script>
+<style>
+    body {
+        background-color: blueviolet;
+        margin-left: 200px;
+        padding: 30px;
+        margin: 470px;
+        margin-top: 80px;
+        border: 6px solid black;
+    }
+    
+    #acnum {
+        text-align: center;
+        height: 50px;
+        width: 500px;
+        border-style: solid;
+        border-color: black;
+    }
+    
+    #acsqa {
+        text-align: center;
+        height: 50px;
+        width: 500px;
+        border-color: black;
+        border-style: dashed;
+    }
+    
+    #btnd {
+        text-align: center;
+        height: 50px;
+        width: 500px;
+        border-style: solid;
+        border-color: black;
+    }
+    
+    #accub {
+        text-align: center;
+        height: 50px;
+        width: 500px;
+        border-color: black;
+        border-style: dashed;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+</style>
+
+<body>
+    <h2>Calculate the Square and cube</h2>
+    <form>
+        <div>
+            <label for="number" class="form-label">Enter the any Number:</label> name: <input type="number" class="form-control" id="acnum" placeholder="Enter the Number" name="acnum">
+        </div>
+        <input type="button" value="Convert" class="btn btn-dark" onclick="hiprint()" id="btnd">
+        <div>
+            <label for="number" class="form-label">Here,the answer of Square:</label>
+            <input type="number" class="form-control" id="acsqa" placeholder="Square" name="acsqa" readonly>
+        </div>
+        <div>
+            <label for="number" class="form-label">Here,the answer of Cube:</label>
+            <input type="number" class="form-control" id="accub" placeholder="Cube" name="accub" readonly>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
