@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightpink;
+            width: 400px;
+            border: 5px solid black;
+            padding: 10px;
+            margin: 450px;
+            margin-top: 50px;
+        }
+        
+        #bt {
+            background-color: black;
+            color: chartreuse;
+            height: 25px;
+            border-radius: 5px;
+        }
+        
+        #card {
+            border: 5px solid black;
+            padding: 10px;
+        }
+        
+        #d1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+            font-size: 30px;
+            color: aqua;
+            text-align: center;
+            text-shadow: 1px;
+        }
+        
+        #d2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: aliceblue;
+            text-align: center;
+            text-shadow: 1px;
+        }
+    </style>
+</head>
+<script>
+    function display() {
+        let x = document.getElementById("text").value;
+        document.getElementById("d1").innerHTML = x;
+        let b = document.getElementById("text1").value;
+        document.getElementById("d2").innerHTML = b;
+        if (document.getElementById("red").checked == true) {
+            document.getElementById("card").style.backgroundColor = "red";
+        } else if (document.getElementById("purple").checked == true) {
+            document.getElementById("card").style.backgroundColor = "purple";
+        } else if (document.getElementById("blue").checked == true) {
+            document.getElementById("card").style.backgroundColor = "blue";
+        } else if (document.getElementById("orange").checked == true) {
+            document.getElementById("card").style.backgroundColor = "orange";
+        } else {
+            alert("Please select any color");
+        }
+    }
+</script>
+
+<body>
+    <br>
+    <textarea id="text" placeholder="Enter some text"></textarea>
+    <br>
+    <b>Choose a color</b><br>
+    <input type="radio" id="red" class="btn btn-primary" name="colors"><b>Red</b>
+    <input type="radio" id="purple" class="btn btn-primary" name="colors"><b>Purple</b>
+    <input type="radio" id="blue" class="btn btn-primary" name="colors"><b>Blue</b>
+    <input type="radio" id="orange" class="btn btn-primary" name="colors"><b>Orange</b>
+    <br><br>
+    <textarea id="text1" placeholder="Message..."></textarea>
+    <br><br>
+    <div>
+        <button id="bt" onclick="display();">Submit</button>
+    </div><br><br>
+    <div id="card" align="center">
+        <span id="d1"></span>
+        <br>
+        <br>
+        <span id="d2"></span>
+    </div>
+</body>
+
+</html>
