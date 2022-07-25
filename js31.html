@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: beige;
+            margin-left: 100px;
+            padding: 30px;
+            margin: 470px;
+            margin-top: 20px;
+            border: 3px solid black;
+            width: 500px;
+        }
+        
+        #chinese,
+        #italian,
+        #mexican,
+        #indian {
+            border-width: 2px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+        
+        #hi {
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<script>
+    function hiin() {
+        if (document.getElementById("indian").checked == true) {
+            document.getElementById("hi").innerHTML = "India";
+        }
+    }
+
+    function hich() {
+        if (document.getElementById("chinese").checked == true) {
+            document.getElementById("hi").innerHTML = "China";
+        }
+    }
+
+    function hime() {
+        if (document.getElementById("mexican").checked == true) {
+            document.getElementById("hi").innerHTML = "Mexico";
+        }
+    }
+
+    function hiit() {
+        if (document.getElementById("italian").checked == true) {
+            document.getElementById("hi").innerHTML = "Italy";
+        }
+    }
+</script>
+
+<body>
+    <h3>Select any one city</h3>
+    <br>
+    <input type="radio" id="indian" class="btn btn-primary" onclick="hiin();" name="city"><b>India</b>
+    <input type="radio" id="chinese" class="btn btn-primary" onclick="hich();" name="city"><b>China</b>
+    <input type="radio" id="mexican" class="btn btn-primary" onclick="hime();" name="city"><b>Mexico</b>
+    <input type="radio" id="italian" class="btn btn-primary" onclick="hiit();" name="city"><b>Italy</b>
+    <br>
+    <span id="hi"></span>
+
+</body>
+
+</html>
